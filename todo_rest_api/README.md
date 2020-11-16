@@ -3,10 +3,13 @@
 An example Deno REST API built with Oak Framework. Uses MongoDB as the database, with the mongo module for the MongoDB driver for Deno. Uses dotenv to handling environment variables.
 
 Oak Framework: https://deno.land/x/oak@v6.3.2
+
 deno_mongo: https://deno.land/x/mongo@v0.13.0
+
 dotenv: https://deno.land/x/dotenv@v0.5.0
 
 Full-app: http://deno-todoapp.s3-website.ca-central-1.amazonaws.com
+
 REST API: https://todoapp-deno.herokuapp.com/
 
 ### Install
