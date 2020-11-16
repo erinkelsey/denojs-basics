@@ -1,6 +1,6 @@
-# Deno REST API
+# Todo REST API - Deno
 
-An example Deno REST API build with Oak Framework.
+An example Deno REST API built with Oak Framework.
 
 Oak Framework: https://deno.land/x/oak@v6.3.2
 
@@ -13,3 +13,5 @@ Deno modules will be downloaded when the app is run.
     $ deno run --allow-net app.ts
 
 NOTE: you need the --allow-net permission to create the server
+
+### REST API Endpoints
