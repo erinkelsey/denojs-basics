@@ -15,3 +15,35 @@ Deno modules will be downloaded when the app is run.
 NOTE: you need the --allow-net permission to create the server
 
 ### REST API Endpoints
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Route</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>GET</td>
+        <td>/todos</td>
+        <td>Get all of the todos.</td>
+    </tr>
+    <tr>
+        <td>POST</td>
+        <td>/todos</td>
+        <td>Add a new todo.</td>
+    </tr>
+    <tr>
+        <td>PUT</td>
+        <td>/todos/:todoId</td>
+        <td>Replaces the entire todo with the specific ID.</td>
+    </tr>
+    <tr>
+        <td>DELETE</td>
+        <td>/todos/:todoId</td>
+        <td>Deletes a todo with the specific ID.</td>
+    </tr>
+</table>
+
+NOTE: make sure that your request body is application/json
