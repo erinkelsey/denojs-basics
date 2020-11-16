@@ -97,3 +97,36 @@ For example, give Deno permission to read a file:
 - needs to be imported into scripts to be used
 - builds up on core, low-level functionalities to provide easier-to-use functionalities
 - https://deno.land/x
+
+## Deploy to Heroku
+
+1.  Create a Procfile with the following:
+
+        web: deno run --allow-net --allow-write --allow-read --allow-plugin --allow-env --unstable --no-check app.ts
+
+2.  On the Heroku Dashboard, create a new application
+3.  On the new application, go to the Settings page
+4.  Click the Add buildpack button
+5.  Enter the following URL in the input box:
+
+        https://github.com/chibat/heroku-buildpack-deno.git
+
+6.  Add your environment variables to under Settings -> Config Vars
+
+7.  Log in to heroku
+
+        $ heroku login
+
+8.  Initialize Heroku git with your app
+
+        $ heroku git:remote -a <your-app-name>
+
+9.  Commit your code
+
+        $ git add .
+        $ git commit -am 'commit message'
+        $ git push heroku master
+
+10. Logs for server
+
+        $ heroku logs --tail
