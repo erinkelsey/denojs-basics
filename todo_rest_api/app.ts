@@ -1,7 +1,12 @@
 import { Application } from "https://deno.land/x/oak/mod.ts";
+import { parse } from 'https://deno.land/std/flags/mod.ts';
 
 import todosRoutes from './routes/todos.ts'
 import { connect } from './helpers/db_client.ts'
+
+const { args } = Deno;
+const DEFAULT_PORT = 8000;
+const argPort = parse(args).port;
 
 /**
  * Initialize connection to MongoDB database. 
@@ -40,4 +45,5 @@ app.use(todosRoutes.allowedMethods())
 /** 
  * Start server, listening on 8000
  */
-await app.listen({ port: 8000 });
+// await app.listen({ port: 8000 });
+await app.listen({ port: argPort ? Number(argPort) : DEFAULT_PORT })

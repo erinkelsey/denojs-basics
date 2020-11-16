@@ -6,6 +6,9 @@ Oak Framework: https://deno.land/x/oak@v6.3.2
 deno_mongo: https://deno.land/x/mongo@v0.13.0
 dotenv: https://deno.land/x/dotenv@v0.5.0
 
+Full-app: http://deno-todoapp.s3-website.ca-central-1.amazonaws.com
+REST API: https://todoapp-deno.herokuapp.com/
+
 ### Install
 
 Deno modules will be downloaded when the app is run.
@@ -19,7 +22,7 @@ In the same directory as this README, create a .env file with the following envi
 
 ### Run
 
-    $ deno run --allow-net --allow-write --allow-read --allow-plugin --allow-env --unstable --no-check xxx.ts
+    $ deno run --allow-net --allow-write --allow-read --allow-plugin --allow-env --unstable --no-check app.ts
 
 #### Important
 
